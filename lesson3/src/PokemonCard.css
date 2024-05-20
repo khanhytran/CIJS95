@@ -1,5 +1,6 @@
-.itemPokemonCard .imgPokemon{
-    background-color: antiquewhite;
+.itemPokemonCard .imgPokemon {
+    width: fit-content;
+    background-color: bisque;
 }
 
 .itemPokemonCard .imgPokemon img{
@@ -25,13 +26,31 @@ div.elemental{
 div.elemental span{
     display: inline-block;
     padding: 4px 16px;
-    background-color: #B676C6;
-    color: white;
     text-align: center;
     border-radius: 4px;
 }
 
-div.elemental span:first-child{
+.Grass {
     background-color: #9BCC51;
     color: black;
+}
+
+.Bug {
+    background-color: #9BCC51;
+    color: black;
+}
+
+.Flying {
+    background-color: #9BCC51;
+    color: black;
+}
+
+.Fire {
+    background-color: #FE7D24;
+    color: white;
+}
+
+.Water {
+    background-color: #1b51c7;
+    color: white;
 }

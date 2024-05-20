@@ -1,0 +1,152 @@
+
+/* Style color */
+.bg-blue-500 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 113 249 / var(--tw-bg-opacity));
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.inline-flex {
+    display: inline-flex;
+}
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.grid {
+    display: grid;
+}
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.col-span-1 {
+    grid-column: span 1 / span 1;
+}
+.gap-5 {
+    gap: 1.25rem;
+}
+.gap-4 {
+    gap: 1rem;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-start {
+    justify-content: start;
+}
+.items-center {
+    align-items: center;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+/* Style spacing */
+.left-0 {
+    left: 0;
+}
+.bottom-0 {
+    bottom: 0;
+}
+.right-0 {
+    right: 0;
+}
+.top-0 {
+    top: 0;
+}
+.mt-5 {
+    margin-top: 1.25rem;
+}
+.mt-12 {
+    margin-top: 3rem;
+}
+.mb-2 {
+    margin-bottom: .5rem;
+}
+.my-3 {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+.py-3 {
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+}
+.pt-5 {
+    padding-top: 1.25rem;
+}
+/* Style img */
+.object-cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+.min-w-full {
+    min-width: 100%;
+}
+.w-full {
+    width: 100%;
+}
+.w-auto{
+    width: auto;
+}
+.h-full {
+    height: 100%;
+}
+.w-5{
+    width: 1.25rem;
+}
+.h-5 {
+    height: 1.25rem;
+}
+.mr-3 {
+    margin-right: .75rem;
+}
+/* Style text */
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-white {
+    color: white;
+}
+.fw-700 {
+    font-weight: 700 !important;
+}
+.text-4x1 {
+    font-size: 2.25rem;
+    line-height: 3rem;
+}
+.text-3x1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+.style {
+    color: rgb(0, 75, 141);
+}
+.rounded-md {
+    border-radius: .375rem;
+}
+[role=button], button {
+    cursor: pointer;
+}
