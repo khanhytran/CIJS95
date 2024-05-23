@@ -33,4 +33,6 @@
 .modal .content p{
     margin: 8px 24px;
 }
-
+.modal .content button{
+    margin: 8px 24px;
+}

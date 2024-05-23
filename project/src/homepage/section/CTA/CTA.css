@@ -150,3 +150,7 @@
 [role=button], button {
     cursor: pointer;
 }
+
+.pl-14 {
+    padding-left: 3.5rem;
+}

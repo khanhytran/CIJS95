@@ -9,7 +9,7 @@ export default function CTA() {
         <div className="bg-cta absolute flex justify-center items-center left-0 right-0 bottom-0 top-0 over-hidden">
             <img className='object-cover min-w-full h-full' src="https://prepedu.com/imgs/landingpage/bg-cta-2.svg" alt="background" />
         </div>
-        <div className="container px-8 relative mx-auto">
+        <div className="container px-8 relative mx-auto pl-14">
             <div className="grid grid-cols-2 gap items-center">
                 <div className="flex flex-col w-full text-left">
                     <h3 className='flex flex-col'>

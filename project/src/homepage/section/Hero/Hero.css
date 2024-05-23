@@ -13,6 +13,9 @@
 .flex-col{
     flex-direction: column;
 }
+.flex-row{
+    flex-direction: row;
+}
 .justify-start {
     justify-content: flex-start;
 }
@@ -104,6 +107,9 @@
 .w-4{
     width: 1rem;
 }
+.w-50{
+    width: 50%;
+}
 .h-4{
     height: 1rem;
 }
@@ -148,7 +154,7 @@
     width: 75%;
 }
 .md\:px-20 {
-    /* padding-left: 5rem; */
+    padding-left: 5rem;
     padding-right: 5rem;
 }
 .sm\:flex-row {
@@ -164,7 +170,12 @@
     font-size: 2.25rem;
     line-height: 2.5rem;
 }
-
+.lg\:w-5\/12 {
+    width: 41.666667%;
+}
+.lg\:w-7\/12 {
+    width: 58.333333%;
+}
 /* Style img */
 .object-cover {
     -o-object-fit: cover;

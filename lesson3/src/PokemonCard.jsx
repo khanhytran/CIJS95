@@ -7,13 +7,13 @@ const PokemonCard = (props) => {
         alert(`${props.name} xin chào`)
     }
     const [showModal, setShowModal] = useState(false);
-    const [pokemonname,setPokemonName] = useState(props.pokemon.name)
-    const [pokemonelemental,setPokemonElemental] = useState(props.pokemon.elemental)
-    const handleSave = () => {
-        props.onSave(props.id, name, elemental); // Assuming you pass a function to save the changes
-        setShowModal(false);
+    const [tempPokemon,setTempPokemon] = useState(props.pokemon);
+    const handleChange = (e) => {
+        setTempPokemon({
+            ...tempPokemon,
+            [e.target.name] : e.target.value
+        })
     }
-    
     return (
         <div className="bound">
             <div className="itemPokemonCard">
@@ -34,10 +34,15 @@ const PokemonCard = (props) => {
                   setShowModal(false)
                 }}
                 >
-                  <img src={props.pokemon.image} alt="pokemon image" />
-                  <p>Tên: <input type="text" value={pokemonname} onChange={(e) => {setPokemonName(e.target.value)}}/></p>
-                  <p>Hệ nguyên tố: <input type="text" value={pokemonelemental} onChange={(e) => {setPokemonElemental(e.target.value)}}/></p>
-                  <button onClick={handleSave()}>Lưu</button>
+                  <img src={tempPokemon.image} alt="pokemon image" />
+                  <p>Tên: <input type="text" value={tempPokemon.name} onChange={(e) => handleChange(e)} name='name'/></p>
+                  <p>Hệ nguyên tố: <input type="text" value={tempPokemon.elemental} onChange={(e) => handleChange(e)} name='elemental'/></p>
+                  <button onClick={() =>{
+                    props.handleChange({
+                        ...tempPokemon
+                    })
+                    setShowModal
+                  }}>Lưu</button>
                 </Modal>}
         </div>
     )

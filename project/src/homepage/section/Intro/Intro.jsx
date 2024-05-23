@@ -11,7 +11,7 @@ export default function Intro() {
         <div className="text-center mb-10 ">
           <div className="flex flex-col justify-center">
             <h2 className='text-2x1 text-gray-800 flex flex-col justify-center mb-2'>
-              <b className='mb-3 text-4xl'>Công Nghệ Dẫn Đầu</b>
+              <b className='mb-3 text-4xl fw-700'>Công Nghệ Dẫn Đầu</b>
               <b className='text-4xl fw-700 style'>Luyện Thi TOEIC Dễ Dàng - Hiệu Quả!</b>
             </h2>
           </div>

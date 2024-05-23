@@ -18,46 +18,56 @@ import PokemonCard from './PokemonCard'
 import Modal from './Modal'
 
 function App() {
-  const [bulbasaur, setBulbasaur] = useState({
-    id: '#001',
-    name: "Bulbasaur",
-    image: png001,
-    elemental: 'Grass'
-  });
-  const [ivysaur, setIvysaur] = useState({
-    id: '#002',
-    name: "Ivysaur",
-    image: png002,
-    elemental: 'Grass'
-  });
-  const [venusaur, setVenusaur] = useState({
-    id: '#003',
-    name: "Venusaur",
-    image: png003,
-    elemental: 'Grass'
-  });
-  const [charmender, setCharmender] = useState({
-    id: '#004',
-    name: "Charmender",
-    image: png004,
-    elemental: 'Fire'
-  });
-  const [pokemonSelected, setPokemonSelected] = useState(null);
-  
+  const [listPokemon, setListPokemon] = useState([
+    {
+      id: '#001',
+      name: "Bulbasaur",
+      image: png001,
+      elemental: 'Grass'
+    },
+    {
+      id: '#002',
+      name: "Ivysaur",
+      image: png002,
+      elemental: 'Grass'
+    },
+    {
+      id: '#003',
+      name: "Venusaur",
+      image: png003,
+      elemental: 'Grass'
+    },
+    {
+      id: '#004',
+      name: "Charmender",
+      image: png004,
+      elemental: 'Fire'
+    }
+  ])
+const [nameSearch, setNameSearch] = useState('')
+const [filter, setFilter] = useState({name:''})
+
   return (
-    <div className='listPokemonCard'>
-      <PokemonCard pokemon={bulbasaur}   id={bulbasaur.id} name={bulbasaur.name} image={bulbasaur.image} elemental={bulbasaur.elemental}/>
-      <PokemonCard pokemon={ivysaur}  id={ivysaur.id} name={ivysaur.name} image={ivysaur.image} elemental={ivysaur.elemental}/>
-      <PokemonCard pokemon={venusaur} id={venusaur.id} name={venusaur.name} image={venusaur.image} elemental={venusaur.elemental}/>
-      <PokemonCard pokemon={charmender} id={charmender.id} name={charmender.name} image={charmender.image} elemental={charmender.elemental}/>
-      {/* <PokemonCard id="#005" name="Charmelon" image={png005} elemental="Fire"/>
-      <PokemonCard id="#006" name="Charizard" image={png006} elemental="Fire"/>
-      <PokemonCard id="#007" name="Squirtle" image={png007} elemental="Water"/>
-      <PokemonCard id="#008" name="Watortle" image={png008} elemental="Water"/>
-      <PokemonCard id="#009" name="Blastoise" image={png009} elemental="Water"/>
-      <PokemonCard id="#010" name="Caterpie" image={png010} elemental="Bug"/>
-      <PokemonCard id="#011" name="Metapod" image={png011} elemental="Bug"/>
-      <PokemonCard id="#012" name="Butterfree" image={png012} elemental="Bug"/> */}
+    <div>
+      <div style={{display:'flex', justifyContent:'center',textAlign: 'center', margin: '18px 0'}}>
+      <div>
+        <input value={nameSearch} onChange={(e) => {
+          setNameSearch(e.target.value)
+        } } placeholder='Nhập tên pokemon' />
+      </div>
+      <button onClick={() => {
+        setFilter({...filter, name:nameSearch})
+      }}>Search</button>
+      </div>
+      <div className='listPokemonCard'>
+        {listPokemon.map((pokemon) => {
+          return (
+            filter.name ? (
+              (pokemon.name.trim().toLocaleLowerCase()).includes(filter.name.trim().toLocaleLowerCase()) && <PokemonCard key={pokemon.id} pokemon={pokemon} id={pokemon.id} name={pokemon.name} image={pokemon.image} elemental={pokemon.elemental} />
+            ) : (<PokemonCard key={pokemon.id} pokemon={pokemon} id={pokemon.id} name={pokemon.name} image={pokemon.image} elemental={pokemon.elemental} />)
+          )
+        })}
+      </div>
     </div>
   )
 }
