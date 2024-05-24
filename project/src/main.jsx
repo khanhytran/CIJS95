@@ -4,11 +4,15 @@ import './index.css'
 import Hero from './homepage/section/Hero/Hero.jsx'
 import Intro from './homepage/section/Intro/Intro.jsx'
 import CTA from './homepage/section/CTA/CTA.jsx'
+import Course from './homepage/section/Course/Course.jsx'
+import Footer from './homepage/section/Footer/Footer.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Hero />
     <Intro/>
+    <Course/>
     <CTA/>
+    <Footer/>
   </React.StrictMode>,
 )

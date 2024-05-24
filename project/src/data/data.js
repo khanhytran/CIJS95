@@ -1,33 +1,42 @@
-let current = [
+export const currentData = [
     {
-        name: "TOEIC: 1 - 295",
+        name: "TOEIC:",
+        level: "1 - 295",
         description: "Mất gốc LR",
         type: "Listening + Reading (LR)",
+        id: "001"
     },
     {
-        name: "TOEIC: 300 - 595",
+        name: "TOEIC: ",
+        level: "300 - 595",
         description: "Cơ bản LR",
         type: "Listening + Reading (LR)",
+        id: "002"
     },
     {
-        name: "TOEIC: 600 - 650",
+        name: "TOEIC: ",
+        level: "600 - 650",
         description: "Có nền tảng LR",
         type: "Listening + Reading (LR)",
+        id: "003"
     },
 ]
-let aim = [
+export const aimData = [
     {
-        name: "TTOEIC: LR 300",
+        name: "TOEIC: ",
+        level: "LR 300",
         description: "Cơ bản",
         type: "Listening + Reading (LR)",
     },
     {
-        name: "TOEIC: LR 600",
+        name: "TOEIC: ",
+        level: "LR 600",
         description: "Khá",
         type: "Listening + Reading (LR)",
     },
     {
-        name: "TOEIC: LR 800+",
+        name: "TOEIC: ",
+        level: "LR 800+",
         description: "Xuất sắc",
         type: "Listening + Reading (LR)",
     },

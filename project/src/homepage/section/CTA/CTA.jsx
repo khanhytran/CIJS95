@@ -1,5 +1,5 @@
 import React from 'react'
-import './CTA.css'
+import '../../style.css'
 import header from './image/header.svg'
 import arrow from './image/ArrowRight.svg'
 
@@ -14,7 +14,7 @@ export default function CTA() {
                 <div className="flex flex-col w-full text-left">
                     <h3 className='flex flex-col'>
                         <b className='flex flex-col text-left justify-start mb-2'>
-                            <b className='fw-700 text-white text-4x1'>Luyện Thi <b className='fw 700 style text-3x1'>TOEIC</b> Cấp Tốc - Hiệu Quả</b>
+                            <b className='fw-700 text-white text-4x1'>Luyện Thi <b className='fw-700 style text-4x1'>TOEIC</b> Cấp Tốc - Hiệu Quả</b>
                         </b>
                     </h3>
                     <p className='text-white my-3'>Chủ động học với Study Plan và Learning Profile cá nhân hóa</p>

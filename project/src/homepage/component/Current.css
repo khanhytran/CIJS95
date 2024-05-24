@@ -1,0 +1,98 @@
+.w-4\/12 {
+    width: 33.333333%;
+}
+.bg-blue {
+    background-color: rgb(0, 75, 141);
+}
+/* Style */
+.relative {
+    position: relative;
+}
+.flex {
+    display: flex;
+}
+.inline-block {
+    display: inline-block;
+}
+.justify-center {
+    justify-content: center;
+}
+.items-center {
+    align-items: center;
+}
+/* Style spacing */
+.top-0 {
+    top: 0;
+}
+.right-0 {
+    right: 0;
+}
+.left-0 {
+    left: 0;
+}
+.bottom-0 {
+    bottom: 0;
+}
+.py-3 {
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+}
+.pl-6 {
+    padding-left: 1.5rem;
+}
+.w-4 {
+    width: 1rem;
+}
+.h-4 {
+    height: 1rem;
+}
+.rounded-full {
+    border-radius: 9999px;
+}
+.space-x-4>:not([hidden])~:not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-left: calc(1rem*(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(1rem* var(--tw-space-x-reverse));
+}
+/* Style color */
+.bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-white {
+    background: #fff !important;
+}
+.border-gray-100 {
+    --tw-border-opacity: 1;
+    border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+.border-2 {
+    border-width: 2px;
+}
+.rounded-lg {
+    border-radius: .5rem;
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+/* Style text */
+.text-left {
+    text-align: left;
+}
+.text-20 {
+    font-size: 20px;
+}
+.text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.font-bold {
+    font-weight: 700;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+/* Style button */
+.cursor-pointer {
+    cursor: pointer;
+}
