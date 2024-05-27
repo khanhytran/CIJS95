@@ -3,7 +3,7 @@ import './index.css'
 
 const BannerCard = (props) => {
     return (
-        <div className="banner-card">
+        <div className="banner-card" onClick={props.onClick}>
             <div className="banner-image">
                 <img className="" src={props.image} alt={props.name} />
                 <div className="overlay2">

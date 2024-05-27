@@ -17,7 +17,8 @@ const MovieModal = ({ isOpen, onRequestClose, movie }) => {
             <div className="movie-detail transparent">
                 <img src={movie.image} alt={movie.movieName} className="movie-details-image" />
                 <h2 className="movie-details-title transparent poppins-semibold text-36">{movie.movieName}</h2>
-                <p className="movie-details-description transparent poppins-regular text-14">{movie.description}</p>
+                <p className="movie-details-description transparent poppins-regular text-14">Eposide: {movie.eposide}</p>
+                <p className="movie-details-description transparent poppins-regular text-14">Description: {movie.description}</p>
                 <button onClick={onRequestClose} className="close-button">Close</button>
             </div>
         </Modal>
