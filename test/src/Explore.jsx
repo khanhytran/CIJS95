@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import MovieCard from './MovieCard'
-import BannerCard from './BannerCard'
-import img1 from './assets/image/spy_carousel.png'
-import img2 from './assets/image/one-piece.png'
-import img3 from './assets/image/boruto-naruto-next-generations.png'
-import img4 from './assets/image/spy_card.png'
-import img5 from './assets/image/attackontitan.png'
-import img6 from './assets/image/captsu_card.png'
-import img7 from './assets/image/aoashi_card.png'
+import React, { useState } from 'react';
+import MovieCard from './MovieCard';
+import BannerCard from './BannerCard';
+import MovieModal from './MovieModal';
+import img1 from './assets/image/spy_carousel.png';
+import img2 from './assets/image/one-piece.png';
+import img3 from './assets/image/boruto-naruto-next-generations.png';
+import img4 from './assets/image/spy_card.png';
+import img5 from './assets/image/attackontitan.png';
+import img6 from './assets/image/captsu_card.png';
+import img7 from './assets/image/aoashi_card.png';
 
 export default function Explore() {
-    const [explore, setExplore] = useState([
+    const [explore] = useState([
         {
             id: "1",
             movieName: "Weather With You",
@@ -18,8 +19,9 @@ export default function Explore() {
             image: img1,
             episode: "01"
         },
-    ])
-    const [listMovie, setListMovie] = useState([
+    ]);
+
+    const [listMovie] = useState([
         {
             id: "1",
             movieName: "Weather With You",
@@ -69,33 +71,44 @@ export default function Explore() {
             image: img7,
             episode: "28"
         }
-    ])
+    ]);
+
+    const [selectedMovie, setSelectedMovie] = useState(null);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
     const handleMovieClick = (movie) => {
-        setExplore([movie]);
+        setSelectedMovie(movie);
+        setModalIsOpen(true);
     };
+
     return (
         <div className="flex justify-center">
-            <div className=''>
+            <div>
                 <div className='explore-section'>
                     <h2 className='poppins-semibold text-32 white '>Explore</h2>
                     <p className='poppins-regular text-22 white-gray-800'>What are you gonna watch today?</p>
                     <div className="banner">
                         {explore.map((movie) => (
-                                <BannerCard key={movie.id} id={movie.id} movie={movie} name={movie.movieName} episode={movie.episode} image={movie.image} description={movie.description}/>
-                            ))}
+                            <BannerCard onClick={() => handleMovieClick(movie)} key={movie.id} id={movie.id} movie={movie} name={movie.movieName} episode={movie.episode} image={movie.image} description={movie.description}/>
+                        ))}
                     </div>
                 </div>
                 <div className="relase">
                     <h2 className='poppins-semibold text-32 white '>New Release</h2>
                     <div className="listMovie flex flex-wrap gap-16">
-                        {listMovie.map((movie) => {
-                            return (
-                                <MovieCard onClick={() => handleMovieClick(movie)} key={movie.id} id={movie.id} movie={movie} name={movie.movieName} episode={movie.episode} image={movie.image} description={movie.description} />
-                            )
-                        })}
+                        {listMovie.map((movie) => (
+                            <MovieCard onClick={() => handleMovieClick(movie)} key={movie.id} id={movie.id} movie={movie} name={movie.movieName} episode={movie.episode} image={movie.image} description={movie.description} />
+                        ))}
                     </div>
                 </div>
+                {selectedMovie && (
+                    <MovieModal
+                        isOpen={modalIsOpen}
+                        onRequestClose={() => setModalIsOpen(false)}
+                        movie={selectedMovie}
+                    />
+                )}
             </div>
         </div>
-    )
+    );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './index.css'
-import './Modal.jsx'
+import './MovieModal.jsx'
 
 
 const MovieCard = (props) => {
