@@ -1,0 +1,125 @@
+@media (min-width: 640px) {
+    .sm\:ml-5 {
+        margin-left: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:p-7 {
+        padding: 1.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:p-5 {
+        padding: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:gap-14 {
+        gap: 3.5rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:p-3 {
+        padding: .75rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:bg-gray-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:gap-5 {
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:flex-row {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:flex-col {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:w-56 {
+        width: 14rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:w-48 {
+        width: 12rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:text-center {
+        text-align: center;
+    }
+}
+
+.space-y-4>:not([hidden])~:not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-bottom: calc(1rem* var(--tw-space-y-reverse));
+    margin-top: calc(1rem*(1 - var(--tw-space-y-reverse)));
+}
+
+.flex-1 {
+    flex: 1 1 0%;
+}
+.border-2 {
+    border-width: 2px;
+}
+.border-white {
+    --tw-border-opacity: 1;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
+    box-sizing: content-box;
+    overflow: visible;
+}
+
+@media (min-width: 640px) {
+    .sm\:hidden {
+        display: none;
+    }
+}
+@media (min-width: 640px) {
+    .sm\:h-10 {
+        height: 2.5rem;
+    }
+}
+@media (min-width: 640px) {
+    .sm\:w-10 {
+        width: 2.5rem;
+    }
+}

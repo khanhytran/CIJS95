@@ -1,9 +1,10 @@
 import { create } from 'zustand'
-import { currentData, aimData } from '../data/data'
+import { currentData, aimData, courseData } from '../data/data'
 
 const useCourseStore = create((set) => ({
     currentCourse: currentData,
     aimCourse: aimData,
+    courseData: courseData,
   
 }))
 

@@ -29,6 +29,14 @@
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity));
 }
+.text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgb(0 177 53 / var(--tw-text-opacity));
+}
+.text-yellow-500 {
+    --tw-text-opacity: 1;
+    color: rgb(244 144 0 / var(--tw-text-opacity));
+}
 
 /* STYLE POSITION */
 .relative {
@@ -76,6 +84,9 @@
 .items-center {
     align-items: center;
 }
+.items-end {
+    align-items: flex-end;
+}
 .overflow-hidden {
     overflow: hidden;
 }
@@ -99,9 +110,27 @@
 .h-5 {
     height: 1.25rem;
 }
+.w-6 {
+    width: 1.5rem;
+}
+.h-6 {
+    height: 1.5rem;
+}
+.w-9 {
+    width: 2.25rem;
+}
+.h-9 {
+    height: 2.25rem;
+}
+.w-0\.5 {
+    width: .125rem;
+}
 /* Style spacing */
 .left-0 {
     left: 0;
+}
+.left-3\.5 {
+    left: .875rem;
 }
 .bottom-0 {
     bottom: 0;
@@ -112,9 +141,15 @@
 .top-0 {
     top: 0;
 }
+.top-5 {
+    top: 1.25rem;
+}
 
 
 /* STYLE PADDING */
+.pr-2 {
+    padding-right: .5rem;
+}
 .px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -139,6 +174,9 @@
     padding-bottom: 2.5rem;
     padding-top: 2.5rem;
 }
+.pt-1 {
+    padding-top: .25rem;
+}
 .pt-5 {
     padding-top: 1.25rem;
 }
@@ -155,6 +193,12 @@
 }
 .mt-5 {
     margin-top: 1.25rem;
+}
+.mt-4 {
+    margin-top: 1rem;
+}
+.mb-1 {
+    margin-bottom: .25rem;
 }
 .mt-12 {
     margin-top: 3rem;
@@ -178,11 +222,23 @@
 .mr-3 {
     margin-right: .75rem;
 }
+.mr-2 {
+    margin-right: .5rem;
+}
+.ml-3 {
+    margin-left: .75rem;
+}
+.ml-1 {
+    margin-left: .25rem;
+}
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
 }
-
+.mx-2 {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
 /* Style img */
 .object-cover {
     -o-object-fit: cover;
@@ -201,8 +257,15 @@
 .text-white {
     color: white;
 }
+.font-medium {
+    font-weight: 500;
+}
 .fw-700 {
     font-weight: 700 !important;
+}
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
 }
 .text-4x1 {
     font-size: 2.25rem;
@@ -268,6 +331,12 @@ a {
         line-height: 2.5rem;
     }
 }
+@media (min-width: 640px) {
+    .sm\:left-4 {
+        left: 1rem;
+    }
+}
+
 .container {
     width: 100%;
 }

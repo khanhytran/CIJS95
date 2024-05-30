@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
 import './Current.css'
+import '../../style.css'
 
 const Current = (props) => {
     
@@ -13,8 +13,10 @@ const Current = (props) => {
                         <label
                             className="inline-block h-4 w-4 rounded-full"
                             style={{
-                                outline: props.isActive ? 'white solid 1px bg' : 'black solid 1px',
-                                outlineOffset: '4px'
+                                outline: props.isActive ? 'white solid 1px': 'black solid 1px',
+                                outlineOffset: '4px',
+                                backgroundColor:props.isActive ? 'rgb(249 250 251/var(--tw-bg-opacity))' : ''
+
                             }}
                         ></label>
                         <h4 className={`inline-block fw-700 text-16 ${props.isActive ? 'text-white' : 'text-gray-800'}`}>

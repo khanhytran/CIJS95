@@ -3,16 +3,27 @@ import Current from '../../component/Current'
 import useCourseStore from '../../../store/courseStore'
 import '../../style.css'
 import './Course.css'
+import CardCourse from '../../component/CardCourse'
 
 export default function Course() {
-  const currentCourse = useCourseStore((state) => state.currentCourse)
-  const aimCourse = useCourseStore((state) => state.aimCourse)
+  const currentCourse = useCourseStore((state) => state.currentCourse);
+  const aimCourse = useCourseStore((state) => state.aimCourse);
+  const courseData = useCourseStore((state) => state.courseData);
   const [currentSelected, setCurrentSelected] = useState();
+  const [choose, setChoose] = useState();
   const [currentFilter, setCurrentFilter] = useState('Listening + Reading (LR)');
   const options = ['Listening + Reading (LR)', 'Speaking + Writing (SW)', 'Listening + Reading + Speaking + Writing (4KN)'];
 
   const handleClick = (id) => {
     setCurrentSelected(id);
+  };
+
+  const handleChoose = (id) => {
+    setChoose(id);
+  };
+
+  const handleFilterChange = (filter) => {
+    setCurrentFilter(filter);
   };
   return (
 
@@ -26,34 +37,18 @@ export default function Course() {
           <p className='text-gray-́800'>Lộ trình học chi tiết, phù hợp và dành riêng cho bạn</p>
         </div>
         <div className="mt-7 text-center">
-          <div className="inline-flex flex mx-auto bg-white rounded-16px border border-neutral-200 p-4px">
-            <div className="block x1:inline-block">
-              <button
-                role="button"
-                className="rounded-12px px-40px py-12px text-16px text-white bg-blue-500 hover:bg-blue-600 w-full font-semibold"
-                href=""
-              >
-                Listening + Reading (LR)
-              </button>
-            </div>
-            <div className="block x1:inline-block">
-              <button
-                role="button"
-                className="rounded-12px px-40px py-10px px-10px text-16px bg-white text-gray-500 w-full font-medium"
-                href=""
-              >
-                Speaking + Writing (SW)
-              </button>
-            </div>
-            <div className="block x1:inline-block">
-              <button
-                role="button"
-                className="rounded-12px px-40px py-10px px-10px text-16px bg-white text-gray-500 w-full font-medium"
-                href=""
-              >
-                Listening + Reading + Speaking + Writing (4KN)
-              </button>
-            </div>
+        <div className="inline-flex flex mx-auto bg-white rounded-16px border border-neutral-200 p-4px">
+            {options.map(option => (
+              <div className="block x1:inline-block" key={option}>
+                <button
+                  role="button"
+                  className={`rounded-12px px-40px py-12px text-16px ${currentFilter === option ? 'text-white bg-blue-500 hover:bg-blue-600' : 'bg-white text-gray-500'} w-full font-semibold`}
+                  onClick={() => handleFilterChange(option)}
+                >
+                  {option}
+                </button>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -65,7 +60,7 @@ export default function Course() {
               </div>
               <div className="overflow-auto sm:py-4">
                 <div className='flex items-center w-max sm:w-full space-x-5 pb-8 sm:p-0'>
-                  {currentCourse.map((item) => {
+                  {currentCourse.filter((item) => item.type === currentFilter).map((item) => {
                     return <Current key={item.id} name={item.name} level={item.level} description={item.description} isActive={item.id == currentSelected} handleClick={() => {
                       handleClick(item.id)
                     }} />
@@ -79,14 +74,29 @@ export default function Course() {
               </div>
               <div className="overflow-auto sm:py-4">
                 <div className='flex items-center w-max sm:w-full space-x-5 pb-8 sm:p-0'>
-                  {aimCourse.map((item) => {
-                    return <Current key={item.id} level={item.level} description={item.description} />
+                  {aimCourse.filter((item) => item.type === currentFilter).map((item) => {
+                    return <Current key={item.id} level={item.level} description={item.description} isActive={item.id == choose} handleClick={() => {
+                      handleChoose(item.id)
+                    }} />
                   })}
                 </div>
               </div>
             </div>
           </div>
-          <div className="step-2"></div>
+          <div className="step-2 mt-5 mb-8 px-4 md:px-8 relative">
+            <div>
+              <h3 className='fw-700 py-3 text-20 text-left text-gray-800'>Chi tiết lộ trình học phù hợp dành cho bạn</h3>
+              <div id='road-map' className="rounded-lg sm:block overflow-auto px-5 md:mx-0 py-5 my-2 bg-blue-50"></div>
+              <div className="list-card-course relative">
+                <div className="w-0.5 left-3.5 sm:left-4 top-5 bottom-0 ml-1 z-1 absolute bg-gray-100"></div>
+                <div className="relative pt-1">
+                {courseData.filter((item) => item.type === currentFilter).map((item) => {
+                    return <CardCourse key={item.id} name={item.name} bullet={item.bullet} description={item.description} price={item.price} begin={item.begin} lesson={item.lesson} timeline={item.timeline} learner={item.learner} image={item.image}/>
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
           <div></div>
         </div>
       </div>
