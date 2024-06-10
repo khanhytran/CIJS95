@@ -1,7 +1,7 @@
 import React from 'react'
 import icon from './image/Background+Border.png'
 import './CardCourse.css'
-import '../../style.css'
+
 
 export default function CardCourse(props) {
     return (
@@ -10,7 +10,7 @@ export default function CardCourse(props) {
             </div>
             <div className="flex-1 ml-3 sm:ml-5 pr-2 text-left">
                 <div>
-                    <h4 className='fw-4 uppercase text-lg' style={{ color: 'rgb(0, 75, 141)' }}>{props.bullet}</h4>
+                    <h4 className='fw-700 uppercase text-lg' style={{ color: 'rgb(0, 75, 141)' }}>{props.bullet}</h4>
                     <p className='text-gray-500 w-full'>
                         {props.description}
                     </p>

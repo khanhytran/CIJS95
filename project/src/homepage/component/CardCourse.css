@@ -3,7 +3,11 @@
         margin-left: 1.25rem;
     }
 }
-
+@media (min-width: 640px) {
+    .sm\:mt-1 {
+        margin-top: .25rem;
+    }
+}
 @media (min-width: 1024px) {
     .lg\:p-7 {
         padding: 1.75rem;
