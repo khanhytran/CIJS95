@@ -11,7 +11,7 @@ export default function ModalPayment() {
                         <div style={{maxWidth:'unset'}} className="form md:shadow-2x1 p-8 md:block">
                             <div className="flex flex-row fw-700 text-xl items-center">
                                 <button>
-                                    <span>
+                                    <span className='bg-white'>
                                         <svg className="svg-inline--fa fa-chevron-down" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path className fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" /></svg>
                                     </span>
                                 </button>
@@ -25,20 +25,21 @@ export default function ModalPayment() {
                                     <p className='text-left text-gray-400 font-medium'>Giá gốc</p>
                                     <p className='font-medium text-xl'>1.500.000 đ</p>
                                 </div>
-                                <div className="py-3 border-y border-gray-200w">
-                                    <div className="border-gray-200">
-                                        <input type="text" placeholder='Nhập mã coupon' />
-                                        <p>
-                                            <button role="button" className="rounded-[12px] px-2 py-3 font-[600] text-[14px] py-[8px] px-[14px] w-full bg-blue-500 text-white hover:bg-blue-600 py-[8px] px-[14px] w-full bg-gray-400 hover:bg-gray-400 cursor-not-allowed text-white" disabled href> Áp dụng</button>
+                                <div className="py-3 border-y border-gray-200">
+                                    <div className="border pr-1 pl-5 rounded-12px w-full h-52px flex items-center gap-3 border-gray-200">
+                                        <input className='flex-1 font-500 text-gray-500' type="text" placeholder='Nhập mã coupon' />
+                                        <p className='font-medium text-x1'>
+                                            <button role="button" className="rounded-12px px-2 py-3 font-[600] text-[14px] py-[8px] px-[14px] w-full bg-blue-500 text-white hover:bg-blue-600 py-[8px] px-[14px] w-full bg-gray-400 hover:bg-gray-400 cursor-not-allowed text-white" disabled href> Áp dụng</button>
                                         </p>
                                     </div>
+                                    
                                 </div>
                             </div>
-                            <div className="flex">
-                                <p>Tổng tiền</p>
-                                <p>1.500.000 đ</p>
+                            <div className="flex flex-row justify-between items-center pt-3">
+                                <p className='text-left text-grey-400 font-medium '>Tổng tiền</p>
+                                <p className='fw-700 text-2x1' style={{color:'rgb(0, 75, 141)'}}>1.500.000 đ</p>
                             </div>
-                            <button></button>
+                            <button className="p-3 md:p-5 mt-5 rounded-xl w-full fw-700 text-xl text-white button-pay-now" style={{backgroundColor: 'rgb(0, 75, 141)'}}>THANH TOÁN</button>
                         </div>
                     </div>
                 </div>

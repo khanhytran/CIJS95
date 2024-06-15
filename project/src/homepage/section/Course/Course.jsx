@@ -17,8 +17,8 @@ export default function Course() {
     setCurrentSelected(id);
   };
 
-  const handleChoose = (id) => {
-    setChoose(id);
+  const handleChoose = (item) => {
+    setChoose(item);
   };
 
   const handleFilterChange = (filter) => {
@@ -58,7 +58,7 @@ export default function Course() {
                 <h3 className='fw-̃700 sm:font-extrabold text-20 flex-1 text-gray-800'>Hãy chọn trình độ hiện tại của bạn</h3>
               </div>
               <div className="overflow-auto sm:py-4">
-                <div className='flex items-center w-max sm:w-full space-x-5 pb-8 sm:p-0'>
+                <div className='flex items-center sm:w-full space-x-5 pb-8 sm:p-0'>
                   {currentCourse.filter((item) => item.type === currentFilter).map((item) => {
                     return <Current key={item.id} name={item.name} level={item.level} description={item.description} isActive={item.id == currentSelected} handleClick={() => {
                       handleClick(item.id)
@@ -72,10 +72,10 @@ export default function Course() {
                 <h3 className='fw-̃700 sm:font-extrabold text-20 flex-1 text-gray-800'>Chọn mục tiêu bạn muốn chinh phục</h3>
               </div>
               <div className="overflow-auto sm:py-4">
-                <div className='flex items-center w-max sm:w-full space-x-5 pb-8 sm:p-0'>
+                <div className='flex items-center sm:w-full space-x-5 pb-8 sm:p-0'>
                   {aimCourse.filter((item) => item.type === currentFilter).map((item) => {
-                    return <Current key={item.id} name={item.name} level={item.level} description={item.description} isActive={item.id == choose} handleClick={() => {
-                      handleChoose(item.id)
+                    return <Current key={item.id} name={item.name} level={item.level} description={item.description} isActive={item.id == choose?.id} handleClick={() => {
+                      handleChoose(item)
                     }} />
                   })}
                 </div>
@@ -89,7 +89,7 @@ export default function Course() {
               <div className="list-card-course relative">
                 <div className="w-0.5 left-3.5 sm:left-4 top-5 bottom-0 ml-1 z-1 absolute bg-gray-100"></div>
                 <div className="relative pt-1">
-                  {courseData.filter((item) => item.type === currentFilter).map((item) => {
+                  {courseData.filter((item) => item.type === currentFilter && item.aim > choose?.aim).map((item) => {
                     return <CardCourse key={item.id} name={item.name} bullet={item.bullet} description={item.description} price={item.price} begin={item.begin} lesson={item.lesson} timeline={item.timeline} learner={item.learner} image={item.image} />
                   })}
                 </div>
@@ -141,33 +141,7 @@ export default function Course() {
                 </div>
               </div>
               {/*  */}
-              <div className="flex flex-col sm:flex-row mt-5">
-                <div className="w-full">
-                  <div id='section-input-info-payment' className="flex text-x1 items-center font-medium text-left text-black">
-                    <img className='mr-1' src="https://prepedu.com/imgs/landingpage/user-icon.svg" alt="Người dùng" />
-                    <h4 className='flex-1 font-bold'>Thông tin thanh toán</h4>
-                  </div>
-                  <div className="grid grid-col-3 gap-5 my-3">
-                    <div className="w-full md:col-span-1 col-span-3">
-                      <div className="w-full flex flex-col items-start relative text-left py-1">
-                        <label htmlFor="phone-login-form" className='text-16 bg-white mb-2 left-5 fw-700 text-gray-800'>Số điện thoại (*)</label>
-                        <div className="relative flex items-center border border-gray-200 rounded-lg px-5 bg-gray-100">
-                          <div className="mr-4">
-                            <div className="phone-area">
-                              <div className="relative">
-                                <div className="cursor-pointer w-max pointer-events -none">
-                                  <i className="fa fa-caret-down" aria-hidden="true" />+84
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <input type="text" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div className="flex flex-col sm:flex-row mt-5"><div className="w-full"><div id="section-input-info-payment" className="flex text-xl items-center font-medium text-left text-black"><img loading="lazy" className="mr-1" src="https://prepedu.com/imgs/landingpage/user-icon.svg" alt="Người dùng" /><h4 className="flex-1 font-bold">Thông tin thanh toán</h4></div><div className="grid grid-cols-3 gap-5 my-3"><div className="w-full md:col-span-1 col-span-3"><div className="w-full flex flex-col items-start relative text-left py-1"><label htmlFor="phone-login-form" className="text-16 bg-white mb-2 left-5 fw-700 text-gray-800 hidden">Số điện thoại (*)</label><div className="relative flex items-center border border-gray-200 rounded-lg px-5"><div className="mr-4"><div className="phone-area"><div className="relative"><div className="cursor-pointer w-max"><i className="fa fa-caret-down" aria-hidden="true" /> +84</div>{/**/}</div></div></div><input id="phone-login-form" className="input-cus-focus w-full py-3" placeholder="Số điện thoại" /></div></div></div></div></div></div>
             </div>
             <div className="flex items-start pb-5 px-4 md:px-8">
               <input id='check-term' className='opacity-0' type="checkbox" />

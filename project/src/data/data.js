@@ -4,6 +4,7 @@ export const currentData = [
         level: "1 - 295",
         description: "Mất gốc LR",
         type: "Listening + Reading (LR)",
+        aim: 1,
         id: "001"
     },
     {
@@ -11,6 +12,7 @@ export const currentData = [
         level: "300 - 595",
         description: "Cơ bản LR",
         type: "Listening + Reading (LR)",
+        aim: 300,
         id: "002"
     },
     {
@@ -18,12 +20,13 @@ export const currentData = [
         level: "600 - 650",
         description: "Có nền tảng LR",
         type: "Listening + Reading (LR)",
+        aim:600,
         id: "003"
     },
     {
         name: "TOEIC:",
         level: "1 - 99",
-        description: "Mất gốc SW",
+        description : "Mất gốc SW",
         type: "Speaking + Writing (SW)",
         id: "004"
     },
@@ -69,6 +72,7 @@ export const aimData = [
         level: "LR 300",
         description: "Cơ bản",
         type: "Listening + Reading (LR)",
+        aim: 300,
         id:'001'
     },
     {
@@ -76,6 +80,7 @@ export const aimData = [
         level: "LR 600",
         description: "Khá",
         type: "Listening + Reading (LR)",
+        aim: 595,
         id:'002'
     },
     {
@@ -83,6 +88,7 @@ export const aimData = [
         level: "LR 800+",
         description: "Xuất sắc",
         type: "Listening + Reading (LR)",
+        aim:800,
         id:'003'
     },
     {
@@ -135,6 +141,7 @@ export const courseData = [
         bullet: "CHẶNG 1: LẤY LẠI CĂN BẢN",
         description: "Học sinh sẽ cần bổ sung vốn từ vựng của các chủ đề phổ biến cùng chủ điểm ngữ pháp trọng tâm làm tiền đề cho việc làm bài TOEIC Listening và Reading ở lộ trình sau",
         price: "500.000 ₫",
+        aim:300,
         begin: "0",
         lesson: "36 bài",
         timeline: "2 tháng",
@@ -148,6 +155,7 @@ export const courseData = [
         bullet: "CHẶNG 2: TĂNG TỐC VỚI ĐẦU RA TOEIC LISTENING & READING 600+",
         description: "Chặng này, học sinh sẽ được học về các tips tránh bẫy phổ biến mà HS ở trình độ này đang gặp phải. Bên cạnh đó, để đạt được đầu ra của khóa học, học sinh cũng bổ sung vốn của 10 chủ đề từ vựng hay gặp (tương đương khoảng 300 từ mới) trong bài thi để hỗ trợ HS trong việc Nghe và Đọc hiểu bên cạnh việc áp dụng linh hoạt các tip để làm bài. Trong khóa học có 9 mindmap để giúp tổng hợp kiến thức ngữ pháp đặc thù bắt buộc HS cần nắm vững",
         price: "1.500.000 ₫",
+        aim:595,
         begin: "300",
         lesson: "48 bài",
         timeline: "3.5 tháng",
@@ -161,6 +169,7 @@ export const courseData = [
         bullet: "CHẶNG 3: CHINH PHỤC ĐẦU RA TOEIC LISTENING & READING 800+",
         description: "Học sinh sẽ cần bổ sung vốn từ vựng của các chủ đề phổ biến cùng chủ điểm ngữ pháp trọng tâm làm tiền đề cho việc làm bài TOEIC Listening và Reading ở lộ trình sau.",
         price: "2.000.000 ₫",
+        aim:800,
         begin: "600",
         lesson: "43 bài",
         timeline: "2 tháng",

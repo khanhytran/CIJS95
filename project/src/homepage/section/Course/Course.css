@@ -270,3 +270,26 @@
 .invisible {
     visibility: hidden !important;
 }
+.w-max {
+    width: -moz-max-content;
+    width: max-content;
+}
+.pointer-events-none {
+    pointer-events: none;
+}
+.cursor-pointer {
+    cursor: pointer !important;
+}
+.fa {
+    font-family: var(--fa-style-family, "Font Awesome 6 Pro");
+    font-weight: var(--fa-style, 900);
+}
+.fa, .fa-brands, .fa-classic, .fa-duotone, .fa-light, .fa-regular, .fa-sharp, .fa-sharp-solid, .fa-solid, .fa-thin, .fab, .fad, .fal, .far, .fas, .fasl, .fasr, .fass, .fast, .fat {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
