@@ -13,6 +13,12 @@ export default function Course() {
   const [currentFilter, setCurrentFilter] = useState('Listening + Reading (LR)');
   const options = ['Listening + Reading (LR)', 'Speaking + Writing (SW)', 'Listening + Reading + Speaking + Writing (4KN)'];
 
+  useEffect(() => {
+    // Reset selections when filter changes
+    setCurrentSelected(undefined);
+    setChoose(undefined);
+  }, [currentFilter]);
+
   const handleClick = (id) => {
     setCurrentSelected(id);
   };
