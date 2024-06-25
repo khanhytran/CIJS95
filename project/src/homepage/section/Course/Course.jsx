@@ -13,12 +13,6 @@ export default function Course() {
   const [currentFilter, setCurrentFilter] = useState('Listening + Reading (LR)');
   const options = ['Listening + Reading (LR)', 'Speaking + Writing (SW)', 'Listening + Reading + Speaking + Writing (4KN)'];
 
-  useEffect(() => {
-    // Reset selections when filter changes
-    setCurrentSelected(undefined);
-    setChoose(undefined);
-  }, [currentFilter]);
-
   const handleClick = (id) => {
     setCurrentSelected(id);
   };
@@ -30,6 +24,30 @@ export default function Course() {
   const handleFilterChange = (filter) => {
     setCurrentFilter(filter);
   };
+
+  // Filter the courseData based on the selected current level and aim level
+
+  const filteredCourses = React.useMemo(() => {
+    if (choose) {
+      const currentLevel = currentCourse.find((item) => item.id === currentSelected).level;
+
+      const aimLevel = choose?.level;
+      
+      if (aimLevel && currentLevel) {
+        return courseData.filter((course) => {
+          const courseBegin = course.begin;
+          const courseAim = course.aim;
+    
+          if (courseBegin <= currentLevel) {
+            return course;
+          }
+        });
+      }
+    }
+
+    return []
+  }, [courseData, currentCourse, currentSelected, choose])
+
   return (
 
     <div className='section-course relative' style={{ background: 'linear-gradient(rgb(255, 255, 255) 0%, rgb(226, 239, 255) 45.31%, rgb(255, 255, 255) 100%)' }}>
@@ -95,9 +113,13 @@ export default function Course() {
               <div className="list-card-course relative">
                 <div className="w-0.5 left-3.5 sm:left-4 top-5 bottom-0 ml-1 z-1 absolute bg-gray-100"></div>
                 <div className="relative pt-1">
-                  {courseData.filter((item) => item.type === currentFilter && item.aim > choose?.aim).map((item) => {
-                    return <CardCourse key={item.id} name={item.name} bullet={item.bullet} description={item.description} price={item.price} begin={item.begin} lesson={item.lesson} timeline={item.timeline} learner={item.learner} image={item.image} />
-                  })}
+                {filteredCourses.length > 0? (
+          filteredCourses.map((item) => {
+            return <CardCourse key={item.id} name={item.name} bullet={item.bullet} description={item.description} price={item.price} begin={item.begin} lesson={item.lesson} timeline={item.timeline} learner={item.learner} image={item.image} />
+          })
+        ) : (
+          <p>No courses found</p>
+        )}
                 </div>
               </div>
             </div>

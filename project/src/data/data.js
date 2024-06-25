@@ -28,6 +28,7 @@ export const currentData = [
         level: "1 - 99",
         description : "Mất gốc SW",
         type: "Speaking + Writing (SW)",
+        aim:1,
         id: "004"
     },
     {
@@ -35,6 +36,7 @@ export const currentData = [
         level: "100 - 199",
         description: "Cơ bản SW",
         type: "Speaking + Writing (SW)",
+        aim:100,
         id: "005"
     },
     {
@@ -42,6 +44,7 @@ export const currentData = [
         level: "200 - 250",
         description: "Có nền tảng SW",
         type: "Speaking + Writing (SW)",
+        aim:200,
         id: "006"
     },
     {
@@ -49,6 +52,7 @@ export const currentData = [
         level: "1 - 394",
         description: "LR 1-295 & SW 1-99",
         type: "Listening + Reading + Speaking + Writing (4KN)",
+        aim:1,
         id: "007"
     },
     {
@@ -56,6 +60,7 @@ export const currentData = [
         level: "400 - 794",
         description: "LR 300-595 & SW 100-199",
         type: "Listening + Reading + Speaking + Writing (4KN)",
+        aim:300,
         id: "008"
     },
     {
@@ -63,6 +68,7 @@ export const currentData = [
         level: "800 - 900",
         description: "LR 600-650 & SW 200-250",
         type: "Listening + Reading + Speaking + Writing (4KN)",
+        aim:600,
         id: "009"
     },
 ]
@@ -96,6 +102,7 @@ export const aimData = [
         level: "SW 100",
         description: "Cơ bản",
         type: "Speaking + Writing (SW)",
+        aim:100,
         id:'004'
     },
     {
@@ -103,6 +110,7 @@ export const aimData = [
         level: "SW 200",
         description: "Khá",
         type: "Speaking + Writing (SW)",
+        aim:200,
         id:'005'
     },
     {
@@ -110,6 +118,7 @@ export const aimData = [
         level: "SW 300+",
         description: "Xuất sắc",
         type: "Speaking + Writing (SW)",
+        aim:300,
         id:'006'
     },
     {
@@ -117,6 +126,7 @@ export const aimData = [
         level: "LR 300 & SW 100",
         description: "Cơ bản",
         type: "Listening + Reading + Speaking + Writing (4KN)",
+        aim:595,
         id:'007'
     },
     {
@@ -131,6 +141,7 @@ export const aimData = [
         level: "LR 800+ & SW 300+",
         description: "Xuất sắc",
         type: "Listening + Reading + Speaking + Writing (4KN)",
+        aim:800,
         id:'009'
     },
 ]
@@ -142,6 +153,7 @@ export const courseData = [
         description: "Học sinh sẽ cần bổ sung vốn từ vựng của các chủ đề phổ biến cùng chủ điểm ngữ pháp trọng tâm làm tiền đề cho việc làm bài TOEIC Listening và Reading ở lộ trình sau",
         price: "500.000 ₫",
         aim:300,
+        id: "001",
         begin: "0",
         lesson: "36 bài",
         timeline: "2 tháng",
@@ -156,6 +168,7 @@ export const courseData = [
         description: "Chặng này, học sinh sẽ được học về các tips tránh bẫy phổ biến mà HS ở trình độ này đang gặp phải. Bên cạnh đó, để đạt được đầu ra của khóa học, học sinh cũng bổ sung vốn của 10 chủ đề từ vựng hay gặp (tương đương khoảng 300 từ mới) trong bài thi để hỗ trợ HS trong việc Nghe và Đọc hiểu bên cạnh việc áp dụng linh hoạt các tip để làm bài. Trong khóa học có 9 mindmap để giúp tổng hợp kiến thức ngữ pháp đặc thù bắt buộc HS cần nắm vững",
         price: "1.500.000 ₫",
         aim:595,
+        id: "002",
         begin: "300",
         lesson: "48 bài",
         timeline: "3.5 tháng",
@@ -170,6 +183,7 @@ export const courseData = [
         description: "Học sinh sẽ cần bổ sung vốn từ vựng của các chủ đề phổ biến cùng chủ điểm ngữ pháp trọng tâm làm tiền đề cho việc làm bài TOEIC Listening và Reading ở lộ trình sau.",
         price: "2.000.000 ₫",
         aim:800,
+        id: "003",
         begin: "600",
         lesson: "43 bài",
         timeline: "2 tháng",
@@ -184,6 +198,7 @@ export const courseData = [
         description: "Xây dựng kiến thức phát âm (bảng phiên âm IPA, trọng âm) và nền tảng ngữ pháp cơ bản (câu đơn, câu ghép, ngôn ngữ học thuật)",
         price: "600.000 ₫",
         begin: "1",
+        aim:100,
         lesson: "33 bài",
         timeline: "1 tháng",
         learner: "198+",
@@ -197,6 +212,7 @@ export const courseData = [
         description: "Nắm vững cấu trúc đề thi TOEIC Speaking và Writing. Làm chủ các kỹ năng, chiến thuật làm bài Speaking và Writing. Trau dồi lượng từ vựng để nâng band điểm TOEIC Speaking và Writing lên 200+",
         price: "1.600.000 ₫",
         begin: "100",
+        aim:200,
         lesson: "12 bài",
         timeline: "2 tháng",
         learner: "184+",
@@ -210,6 +226,7 @@ export const courseData = [
         description: "Nắm vững tiêu chí đánh giá của từng phần thi Speaking và Writing trong TOEIC. Trang bị vốn từ vựng phong phú, ngữ pháp nâng cao. Vận dụng khả năng phân tích, suy luận để tạo câu trả lời/bài viết mạch lạc và thuyết phục, chạm band điểm TOEIC Speaking và Writing 300+",
         price: "2.200.000 ₫",
         begin: "200",
+        aim:300,
         lesson: "12 bài",
         timeline: "2 tháng",
         learner: "215+",
@@ -223,6 +240,7 @@ export const courseData = [
         description: "Tích lũy vốn từ vựng quan trọng, xây dựng nền tảng ngữ pháp cơ bản, hoàn thiện phát âm toàn diện",
         price: "1.000.000 ₫",
         begin: "0",
+        aim:300,
         lesson: "69 bài",
         timeline: "4 tháng",
         learner: "195+",
@@ -237,6 +255,7 @@ export const courseData = [
         price: "2.600.000 ₫",
         begin: "LR 300 & SW 100",
         lesson: "60 bài",
+        aim:595,
         timeline: "4 tháng",
         learner: "232+",
         image: "https://storage.googleapis.com/materials-elements/course/cover/ibRIKSpKoB8kjldqLWzLxOBWd6mi43Sc8gtr8WYn.jpg",
@@ -249,6 +268,7 @@ export const courseData = [
         description: "Nắm vững các tiêu chí đánh giá bài thi TOEIC. Học và áp dụng các tips tránh bẫy, kỹ năng phân tích, làm bài TOEIC 4 kỹ năng. Trang bị vốn từ vựng phong phú band 800+. Thực chiến với số lượng bài chấm chữa lớn",
         price: "3.400.000 ₫",
         begin: "LR 600 & SW 200",
+        aim:800,
         lesson: "55 bài",
         timeline: "4 tháng",
         learner: "218+",
