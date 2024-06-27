@@ -13,8 +13,8 @@ export default function Course() {
   const [currentFilter, setCurrentFilter] = useState('Listening + Reading (LR)');
   const options = ['Listening + Reading (LR)', 'Speaking + Writing (SW)', 'Listening + Reading + Speaking + Writing (4KN)'];
 
-  const handleClick = (id) => {
-    setCurrentSelected(id);
+  const handleSelectCurrent = (item) => {
+    setCurrentSelected(item);
   };
 
   const handleChoose = (item) => {
@@ -28,25 +28,11 @@ export default function Course() {
   // Filter the courseData based on the selected current level and aim level
 
   const filteredCourses = React.useMemo(() => {
-    if (choose) {
-      const currentLevel = currentCourse.find((item) => item.id === currentSelected).level;
-
-      const aimLevel = choose?.level;
-      
-      if (aimLevel && currentLevel) {
-        return courseData.filter((course) => {
-          const courseBegin = course.begin;
-          const courseAim = course.aim;
-    
-          if (courseBegin <= currentLevel) {
-            return course;
-          }
-        });
-      }
+    if (choose && currentSelected) {
+      return courseData.filter((course) => currentSelected.aim <= course.aim && course.aim <= choose.aim && course.type === currentFilter);
     }
-
     return []
-  }, [courseData, currentCourse, currentSelected, choose])
+  }, [courseData, currentSelected, choose, currentFilter])
 
   return (
 
@@ -84,8 +70,8 @@ export default function Course() {
               <div className="overflow-auto sm:py-4">
                 <div className='flex items-center sm:w-full space-x-5 pb-8 sm:p-0'>
                   {currentCourse.filter((item) => item.type === currentFilter).map((item) => {
-                    return <Current key={item.id} name={item.name} level={item.level} description={item.description} isActive={item.id == currentSelected} handleClick={() => {
-                      handleClick(item.id)
+                    return <Current key={item.id} name={item.name} level={item.level} description={item.description} isActive={currentSelected?.id === item.id} handleClick={() => {
+                      handleSelectCurrent(item)
                     }} />
                   })}
                 </div>
@@ -113,13 +99,13 @@ export default function Course() {
               <div className="list-card-course relative">
                 <div className="w-0.5 left-3.5 sm:left-4 top-5 bottom-0 ml-1 z-1 absolute bg-gray-100"></div>
                 <div className="relative pt-1">
-                {filteredCourses.length > 0? (
-          filteredCourses.map((item) => {
-            return <CardCourse key={item.id} name={item.name} bullet={item.bullet} description={item.description} price={item.price} begin={item.begin} lesson={item.lesson} timeline={item.timeline} learner={item.learner} image={item.image} />
-          })
-        ) : (
-          <p>No courses found</p>
-        )}
+                  {filteredCourses.length > 0 ? (
+                    filteredCourses.map((item, index) => {
+                      return <CardCourse key={item.id} name={item.name} bullet={`CHẶNG ${index + 1}: ${item.bullet}`} description={item.description} price={item.price} begin={item.begin} lesson={item.lesson} timeline={item.timeline} learner={item.learner} image={item.image} />
+                    })
+                  ) : (
+                    <p>No courses found</p>
+                  )}
                 </div>
               </div>
             </div>

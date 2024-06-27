@@ -4,7 +4,7 @@ export const currentData = [
         level: "1 - 295",
         description: "Mất gốc LR",
         type: "Listening + Reading (LR)",
-        aim: 1,
+        aim: 295,
         id: "001"
     },
     {
@@ -12,7 +12,7 @@ export const currentData = [
         level: "300 - 595",
         description: "Cơ bản LR",
         type: "Listening + Reading (LR)",
-        aim: 300,
+        aim: 595,
         id: "002"
     },
     {
@@ -20,7 +20,7 @@ export const currentData = [
         level: "600 - 650",
         description: "Có nền tảng LR",
         type: "Listening + Reading (LR)",
-        aim:600,
+        aim: 650,
         id: "003"
     },
     {
@@ -28,7 +28,7 @@ export const currentData = [
         level: "1 - 99",
         description : "Mất gốc SW",
         type: "Speaking + Writing (SW)",
-        aim:1,
+        aim: 99,
         id: "004"
     },
     {
@@ -36,7 +36,7 @@ export const currentData = [
         level: "100 - 199",
         description: "Cơ bản SW",
         type: "Speaking + Writing (SW)",
-        aim:100,
+        aim: 199,
         id: "005"
     },
     {
@@ -44,7 +44,7 @@ export const currentData = [
         level: "200 - 250",
         description: "Có nền tảng SW",
         type: "Speaking + Writing (SW)",
-        aim:200,
+        aim: 250,
         id: "006"
     },
     {
@@ -52,7 +52,7 @@ export const currentData = [
         level: "1 - 394",
         description: "LR 1-295 & SW 1-99",
         type: "Listening + Reading + Speaking + Writing (4KN)",
-        aim:1,
+        aim: 394,
         id: "007"
     },
     {
@@ -60,7 +60,7 @@ export const currentData = [
         level: "400 - 794",
         description: "LR 300-595 & SW 100-199",
         type: "Listening + Reading + Speaking + Writing (4KN)",
-        aim:300,
+        aim: 794,
         id: "008"
     },
     {
@@ -68,7 +68,7 @@ export const currentData = [
         level: "800 - 900",
         description: "LR 600-650 & SW 200-250",
         type: "Listening + Reading + Speaking + Writing (4KN)",
-        aim:600,
+        aim: 900,
         id: "009"
     },
 ]
@@ -86,7 +86,7 @@ export const aimData = [
         level: "LR 600",
         description: "Khá",
         type: "Listening + Reading (LR)",
-        aim: 595,
+        aim: 600,
         id:'002'
     },
     {
@@ -94,7 +94,7 @@ export const aimData = [
         level: "LR 800+",
         description: "Xuất sắc",
         type: "Listening + Reading (LR)",
-        aim:800,
+        aim: 800,
         id:'003'
     },
     {
@@ -102,7 +102,7 @@ export const aimData = [
         level: "SW 100",
         description: "Cơ bản",
         type: "Speaking + Writing (SW)",
-        aim:100,
+        aim: 100,
         id:'004'
     },
     {
@@ -110,7 +110,7 @@ export const aimData = [
         level: "SW 200",
         description: "Khá",
         type: "Speaking + Writing (SW)",
-        aim:200,
+        aim: 200,
         id:'005'
     },
     {
@@ -118,7 +118,7 @@ export const aimData = [
         level: "SW 300+",
         description: "Xuất sắc",
         type: "Speaking + Writing (SW)",
-        aim:300,
+        aim: 300,
         id:'006'
     },
     {
@@ -149,7 +149,7 @@ export const aimData = [
 export const courseData = [
     {
         name: "Nền Tảng TOEIC LR",
-        bullet: "CHẶNG 1: LẤY LẠI CĂN BẢN",
+        bullet: "LẤY LẠI CĂN BẢN",
         description: "Học sinh sẽ cần bổ sung vốn từ vựng của các chủ đề phổ biến cùng chủ điểm ngữ pháp trọng tâm làm tiền đề cho việc làm bài TOEIC Listening và Reading ở lộ trình sau",
         price: "500.000 ₫",
         aim:300,
@@ -164,10 +164,10 @@ export const courseData = [
     },
     {
         name: "TOEIC LR Trung Cấp",
-        bullet: "CHẶNG 2: TĂNG TỐC VỚI ĐẦU RA TOEIC LISTENING & READING 600+",
+        bullet: "TĂNG TỐC VỚI ĐẦU RA TOEIC LISTENING & READING 600+",
         description: "Chặng này, học sinh sẽ được học về các tips tránh bẫy phổ biến mà HS ở trình độ này đang gặp phải. Bên cạnh đó, để đạt được đầu ra của khóa học, học sinh cũng bổ sung vốn của 10 chủ đề từ vựng hay gặp (tương đương khoảng 300 từ mới) trong bài thi để hỗ trợ HS trong việc Nghe và Đọc hiểu bên cạnh việc áp dụng linh hoạt các tip để làm bài. Trong khóa học có 9 mindmap để giúp tổng hợp kiến thức ngữ pháp đặc thù bắt buộc HS cần nắm vững",
         price: "1.500.000 ₫",
-        aim:595,
+        aim: 600,
         id: "002",
         begin: "300",
         lesson: "48 bài",
@@ -179,10 +179,10 @@ export const courseData = [
     },
     {
         name: "TOEIC LR Chuyên Sâu",
-        bullet: "CHẶNG 3: CHINH PHỤC ĐẦU RA TOEIC LISTENING & READING 800+",
+        bullet: "CHINH PHỤC ĐẦU RA TOEIC LISTENING & READING 800+",
         description: "Học sinh sẽ cần bổ sung vốn từ vựng của các chủ đề phổ biến cùng chủ điểm ngữ pháp trọng tâm làm tiền đề cho việc làm bài TOEIC Listening và Reading ở lộ trình sau.",
         price: "2.000.000 ₫",
-        aim:800,
+        aim: 800,
         id: "003",
         begin: "600",
         lesson: "43 bài",
@@ -194,7 +194,7 @@ export const courseData = [
     },
     {
         name: "Nền tảng TOEIC SW",
-        bullet: "CHẶNG 1: LẤY GỐC TIẾNG ANH",
+        bullet: "LẤY GỐC TIẾNG ANH",
         description: "Xây dựng kiến thức phát âm (bảng phiên âm IPA, trọng âm) và nền tảng ngữ pháp cơ bản (câu đơn, câu ghép, ngôn ngữ học thuật)",
         price: "600.000 ₫",
         begin: "1",
@@ -208,7 +208,7 @@ export const courseData = [
     },
     {
         name: "TOEIC SW Trung Cấp",
-        bullet: "CHẶNG 2: CHINH PHỤC TOEIC SPEAKING & WRITING 200+",
+        bullet: "CHINH PHỤC TOEIC SPEAKING & WRITING 200+",
         description: "Nắm vững cấu trúc đề thi TOEIC Speaking và Writing. Làm chủ các kỹ năng, chiến thuật làm bài Speaking và Writing. Trau dồi lượng từ vựng để nâng band điểm TOEIC Speaking và Writing lên 200+",
         price: "1.600.000 ₫",
         begin: "100",
@@ -222,7 +222,7 @@ export const courseData = [
     },
     {
         name: "TOEIC SW Chuyên Sâu",
-        bullet: "CHẶNG 3: BỨT PHÁ ĐẦU RA TOEIC SPEAKING & WRITING 300+",
+        bullet: "BỨT PHÁ ĐẦU RA TOEIC SPEAKING & WRITING 300+",
         description: "Nắm vững tiêu chí đánh giá của từng phần thi Speaking và Writing trong TOEIC. Trang bị vốn từ vựng phong phú, ngữ pháp nâng cao. Vận dụng khả năng phân tích, suy luận để tạo câu trả lời/bài viết mạch lạc và thuyết phục, chạm band điểm TOEIC Speaking và Writing 300+",
         price: "2.200.000 ₫",
         begin: "200",
@@ -236,7 +236,7 @@ export const courseData = [
     },
     {
         name: "Nền Tảng TOEIC 4KN",
-        bullet: "CHẶNG 1: LẤY GỐC TOEIC LISTENING - READING 300 & SPEAKING - WRITING 100",
+        bullet: "LẤY GỐC TOEIC LISTENING - READING 300 & SPEAKING - WRITING 100",
         description: "Tích lũy vốn từ vựng quan trọng, xây dựng nền tảng ngữ pháp cơ bản, hoàn thiện phát âm toàn diện",
         price: "1.000.000 ₫",
         begin: "0",
@@ -250,7 +250,7 @@ export const courseData = [
     },
     {
         name: "TOEIC Trung Cấp 4KN",
-        bullet: "CHẶNG 2: BỨT PHÁ TOEIC LISTENING - READING 600 & SPEAKING - WRITING 200",
+        bullet: "BỨT PHÁ TOEIC LISTENING - READING 600 & SPEAKING - WRITING 200",
         description: "Nắm vững cấu trúc đề thi TOEIC 4 kỹ năng. Luyện tập các chiến thuật và tips tránh bẫy khi làm bài. Bổ sung vốn từ vựng TOEIC 600+. Thực chiến một số đề TOEIC cơ bản",
         price: "2.600.000 ₫",
         begin: "LR 300 & SW 100",
@@ -264,7 +264,7 @@ export const courseData = [
     },
     {
         name: "TOEIC Chuyên Sâu 4KN",
-        bullet: "CHẶNG 3: CHINH PHỤC TOEIC LISTENING - READING 800+ VÀ SPEAKING - WRITING 300+",
+        bullet: "CHINH PHỤC TOEIC LISTENING - READING 800+ VÀ SPEAKING - WRITING 300+",
         description: "Nắm vững các tiêu chí đánh giá bài thi TOEIC. Học và áp dụng các tips tránh bẫy, kỹ năng phân tích, làm bài TOEIC 4 kỹ năng. Trang bị vốn từ vựng phong phú band 800+. Thực chiến với số lượng bài chấm chữa lớn",
         price: "3.400.000 ₫",
         begin: "LR 600 & SW 200",
