@@ -11,7 +11,6 @@ import ModalPayment from './homepage/component/ModalPayment.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Hero />
-    <ModalPayment/>
     <Intro/>
     <Course/>
     <CTA/>

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Current from '../../component/Current'
 import useCourseStore from '../../../store/courseStore'
 import './Course.css'
 import CardCourse from '../../component/CardCourse'
+import ModalPayment from '../../component/ModalPayment'
 
 export default function Course() {
   const currentCourse = useCourseStore((state) => state.currentCourse);
@@ -12,6 +13,8 @@ export default function Course() {
   const [choose, setChoose] = useState();
   const [currentFilter, setCurrentFilter] = useState('Listening + Reading (LR)');
   const options = ['Listening + Reading (LR)', 'Speaking + Writing (SW)', 'Listening + Reading + Speaking + Writing (4KN)'];
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [numberOfCourses, setNumberOfCourses] = useState(0);
 
   const handleSelectCurrent = (item) => {
     setCurrentSelected(item);
@@ -33,6 +36,20 @@ export default function Course() {
     }
     return []
   }, [courseData, currentSelected, choose, currentFilter])
+
+  useEffect(() => {
+    const formatPrice = (price) => {
+      return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    };
+
+    if (filteredCourses.length > 0) {
+      setNumberOfCourses(filteredCourses.length);
+      setTotalPrice(formatPrice(filteredCourses.reduce((total, course) => total + course.price, 0)));
+    } else {
+      setNumberOfCourses(0);
+      setTotalPrice(formatPrice(0));
+    }
+  }, [filteredCourses]);
 
   return (
 
@@ -110,6 +127,9 @@ export default function Course() {
               </div>
             </div>
           </div>
+          {currentSelected && choose && filteredCourses.length > 0 && (
+            <ModalPayment numberOfCourses={numberOfCourses} totalPrice={totalPrice} />
+          )}
           <div>
             <div id='step-3' className='step-3 mt-5 mb-3 px-4 md:px-8'>
               <div id='benefit' className="relative opacity-0 invisible -top-28"></div>

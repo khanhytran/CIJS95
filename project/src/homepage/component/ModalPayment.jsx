@@ -2,7 +2,7 @@ import React from 'react'
 import './ModalPayment.css'
 import '../style.css'
 
-export default function ModalPayment() {
+export default function ModalPayment({ numberOfCourses, totalPrice }) {
     return (
         <div className='relative z-[150]' >
             <div id='modal-payment' className='fixed z-[50] bottom-0 right-0 md:right-24 md:w-max w-full md:pb-4 pt-3 md:pl-5'>
@@ -18,12 +18,12 @@ export default function ModalPayment() {
                                 <p className='ml-2 text=gray-800'>Tóm tắt đơn hàng</p>
                             </div>
                             <div className="fw-700 text-left py-3">
-                                <p>1 khóa học</p>
+                                <p>{numberOfCourses} khóa học</p>
                             </div>
                             <div>
                                 <div className="flex flex-row justify-between items-center py-3 border-b"> 
                                     <p className='text-left text-gray-400 font-medium'>Giá gốc</p>
-                                    <p className='font-medium text-xl'>1.500.000 đ</p>
+                                    <p className='font-medium text-xl'>{totalPrice} đ</p>
                                 </div>
                                 <div className="py-3 border-y border-gray-200">
                                     <div className="border pr-1 pl-5 rounded-12px w-full h-52px flex items-center gap-3 border-gray-200">
@@ -37,7 +37,7 @@ export default function ModalPayment() {
                             </div>
                             <div className="flex flex-row justify-between items-center pt-3">
                                 <p className='text-left text-grey-400 font-medium '>Tổng tiền</p>
-                                <p className='fw-700 text-2x1' style={{color:'rgb(0, 75, 141)'}}>1.500.000 đ</p>
+                                <p className='fw-700 text-2x1' style={{color:'rgb(0, 75, 141)'}}>{totalPrice} đ</p>
                             </div>
                             <button className="p-3 md:p-5 mt-5 rounded-xl w-full fw-700 text-xl text-white button-pay-now" style={{backgroundColor: 'rgb(0, 75, 141)'}}>THANH TOÁN</button>
                         </div>
