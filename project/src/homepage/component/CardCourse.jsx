@@ -24,7 +24,7 @@ export default function CardCourse(props) {
                                 </div>
                                 <h5 className='fw-700 text-xl text-gray-800 '>{props.name}</h5>
                                 <div className="flex flex-row sm:flex-col sm:items-center items-end space-x-3 sm:space-x-0">
-                                    <p className="price fw-700 text-xl" style={{ color: 'rgb(0, 75, 141)' }}>{props.price}</p>
+                                    <p className="price fw-700 text-xl" style={{ color: 'rgb(0, 75, 141)' }}>{props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} đ</p>
                                 </div>
                             </div>
                         </div>
