@@ -52,7 +52,7 @@ export const currentData = [
         level: "1 - 394",
         description: "LR 1-295 & SW 1-99",
         type: "Listening + Reading + Speaking + Writing (4KN)",
-        aim: 394,
+        aim: 295,
         id: "007"
     },
     {
@@ -60,7 +60,7 @@ export const currentData = [
         level: "400 - 794",
         description: "LR 300-595 & SW 100-199",
         type: "Listening + Reading + Speaking + Writing (4KN)",
-        aim: 794,
+        aim: 595,
         id: "008"
     },
     {
@@ -68,7 +68,7 @@ export const currentData = [
         level: "800 - 900",
         description: "LR 600-650 & SW 200-250",
         type: "Listening + Reading + Speaking + Writing (4KN)",
-        aim: 900,
+        aim: 650,
         id: "009"
     },
 ]
@@ -126,13 +126,14 @@ export const aimData = [
         level: "LR 300 & SW 100",
         description: "Cơ bản",
         type: "Listening + Reading + Speaking + Writing (4KN)",
-        aim:595,
+        aim:300,
         id:'007'
     },
     {
         name: "TOEIC: ",
         level: "LR 600 & SW 200",
         description: "Khá",
+        aim:600,
         type: "Listening + Reading + Speaking + Writing (4KN)",
         id:'008'
     },
@@ -255,7 +256,7 @@ export const courseData = [
         price: 2600000,
         begin: "LR 300 & SW 100",
         lesson: "60 bài",
-        aim:595,
+        aim:600,
         timeline: "4 tháng",
         learner: "232+",
         image: "https://storage.googleapis.com/materials-elements/course/cover/ibRIKSpKoB8kjldqLWzLxOBWd6mi43Sc8gtr8WYn.jpg",
